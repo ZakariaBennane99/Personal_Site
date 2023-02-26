@@ -1,0 +1,537 @@
+
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-LightItalic.ttf');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-BoldItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-Medium.ttf');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ubuntu";
+	src: url('../../fonts/Ubuntu-MediumItalic.ttf');
+	font-weight: 500;
+	font-style: italic;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #d4d4d4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgb(24, 24, 24);
+	border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(0, 0, 0);
+}
+
+
+/* selection color */
+::-moz-selection { /* Code for Firefox */
+	color: white;
+	background: black;
+}
+
+::selection {
+	color: white;
+	background: black;
+}
+
+.left-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: black;
+	font-family: 'Ubuntu';
+	position: fixed;
+	padding: 3%;
+	width: 20%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
+.left-section .menu-holder {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.left-section .menu-holder h1 {
+	font-weight: 300;
+	font-size: 2rem;
+	cursor: pointer;
+	margin: 0.5rem 0rem 0rem 0rem;
+}
+
+.left-section .menu-holder img {
+	transition: all 0.15s;
+}
+
+.left-section .menu-holder .blog-underline h1:hover + img {
+	filter: invert(100%) sepia(1%) saturate(3776%) hue-rotate(184deg) brightness(109%) contrast(100%);
+}
+
+.left-section .menu-holder .projects-underline h1:hover + img {
+	filter: invert(100%) sepia(1%) saturate(3776%) hue-rotate(184deg) brightness(109%) contrast(100%);
+}
+
+.left-section .menu-holder .about-underline h1:hover + img {
+	filter: invert(100%) sepia(1%) saturate(3776%) hue-rotate(184deg) brightness(109%) contrast(100%);
+}
+
+
+.footer-section {
+	width: fit-content;
+	color: white;
+}
+
+.footer-section h1 {
+	font-weight: normal;
+	font-size: medium;
+	margin: 0px;
+}
+
+.footer-section p {
+	font-weight: normal;
+	font-size: small;
+	margin: 5px 0px 0px 0px;
+	color: rgb(135, 135, 135);
+}
+
+/* the post */
+.the-post-container {
+	float: right;
+	width: 74%;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	font-family: 'Ubuntu';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.the-post-container img {
+    max-width: 100%;
+	border-radius: 7px;
+	box-shadow: 0px 0px 6px 0px rgba(138, 138, 138, 0.2);
+}
+
+.the-post-container div:nth-of-type(3) {
+	width: 65%;
+}
+
+.the-post-container div:nth-of-type(2) {
+	width: 65%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.the-post-container div:nth-of-type(2) p {
+	display: inline-block;
+	padding: 5px;
+	border-radius: 6px;
+	background-color: #565656;
+	color: white;
+	font-size: small;
+}
+
+.the-post-container div:nth-of-type(3) code {
+	border-radius: 7px;
+}
+
+.the-post-container div:nth-of-type(3) p code {
+	background-color: #f3f3f3;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+.the-post-container div:nth-of-type(1) {
+	width: 65%;
+	border-radius: 9px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin-bottom: 15px;
+	border-radius: 9px;
+}
+
+.the-post-container div:nth-of-type(3) h1 {
+	font-size:x-large;
+}
+
+.the-post-container div:nth-of-type(3) p {
+	line-height: 1.6;
+	font-weight: 400;
+	font-size: large;
+}
+
+
+/* the blog container */
+.blog-list-container {
+	float: right;
+	width: 74%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	justify-content: center;
+	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 350px);
+	grid-gap: 40px;
+	font-family: 'Ubuntu';
+}
+
+.blog-list-container .blog-info-container {
+	box-shadow: 0px 0px 6px 0px rgb(174, 174, 174);
+	border-radius: 9px;
+	height: 380px;
+}
+
+.blog-list-container .blog-info-container .txt-part {
+	position: relative;
+	height: 37.5%;
+	margin: 4%;
+}
+
+.blog-list-container .blog-info-container .txt-part div:first-of-type {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: #565656;
+	color: white;
+	padding: 5px;
+	border-radius: 6px;
+	font-size: small;
+}
+
+.blog-list-container .blog-info-container .txt-part div:nth-of-type(2) {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background-color: #565656;
+	color: white;
+	padding: 5px;
+	border-radius: 6px;
+	font-size: small;
+}
+
+
+.blog-list-container .project-info-container {
+	box-shadow: 0px 0px 6px 0px rgb(174, 174, 174);
+	border-radius: 9px;
+	height: 350px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.blog-list-container .project-info-container .modal-container {
+	position: absolute;
+	height: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: fit-content;
+	padding: 12px;
+	border-radius: 9px;
+	background-color: rgb(0, 0, 0);
+
+}
+
+.blog-list-container .project-info-container .modal-container h1 {
+	margin: 0px;
+	color: white;
+}
+
+.blog-list-container .project-info-container .shadow-container {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(0, 0, 0);
+	border-radius: 9px;
+	opacity: .2;
+}
+
+.the-project-container {
+	float: right;
+	width: 74%;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	font-family: 'Ubuntu';
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.the-project-container img {
+    max-width: 100%;
+	border-radius: 7px;
+	box-shadow: 0px 0px 6px 0px rgba(138, 138, 138, 0.2);
+}
+
+.the-project-container div:nth-of-type(2) {
+	width: 60%;
+}
+
+.the-project-container div:nth-of-type(1) h1 {
+	margin: 0px;
+}
+
+.the-project-container div:nth-of-type(2) p, ul li {
+	line-height: 1.6;
+	font-weight: 400;
+	font-size: large;
+}
+
+.the-project-container div:nth-of-type(1) {
+	width: 60%;
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+	text-align: center;
+	margin-bottom: 20px;
+	border-radius: 9px;
+}
+
+
+.blog-list-container .blog-info-container img {
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+}
+
+.blog-list-container .blog-info-container h1 {
+	display: inline-flex;
+	justify-content: flex-start;
+	font-size: 1.7rem;
+	margin: 0rem;
+}
+
+.about-page {
+	float: right;
+	width: 70%;
+	height: 100%;
+	margin: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Ubuntu';
+	align-items: center;
+}
+
+.about-container {
+	box-shadow: 0px 0px 6px 0px rgb(174, 174, 174);
+	width: 60%;
+	border-radius: 9px;
+	padding: 40px;
+	margin-top: 30px;
+}
+
+.about-container img {
+	margin-right: 10px;
+}
+
+.about-container h1 {
+	margin-top: 0px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.about-container p {
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 25px;
+}
+
+.about-container .details-wrapper p:nth-child(2) {
+	margin-bottom: 0px;
+}
+
+
+@media only screen and (max-width: 1153px) {
+	.left-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		background-color: black;
+		font-family: 'Ubuntu';
+		position: fixed;
+		padding: 2%;
+		width: 14%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.left-section .menu-holder {
+		width: 80%;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.left-section .menu-holder img {
+		width: 70%;
+		margin-bottom: 1.2rem;
+	}
+
+	.footer-section {
+		width: fit-content;
+		color: white;
+	}
+
+	.footer-section h1 {
+		font-weight: normal;
+		font-size: x-small;
+		margin: 0px;
+	}
+
+	.footer-section p {
+		font-weight: normal;
+		font-size:xx-small;
+		margin: 2px 0px 0px 0px;
+		color: rgb(135, 135, 135);
+	}
+	.about-page {
+		float: right;
+		width: 80%;
+		height: 100%;
+		margin: 2%;
+	}
+
+	.about-container {
+		width: 75%;
+		padding: 1.3rem;
+	}
+	.blog-list-container {
+		width: 80%;
+		grid-template-columns: repeat(auto-fill, 350px);
+		margin-top: 2%;
+		margin-bottom: 5%;
+	}
+
+	@media only screen and (max-width: 400px) {
+		.blog-list-container {
+			width: 80%;
+			grid-template-columns: repeat(auto-fill, 100%);
+			margin-top: 2%;
+			margin-bottom: 5%;
+		}
+	}
+
+	.the-post-container {
+		width: 80%;
+		margin-top: 3%;
+	}
+
+	.the-post-container div:nth-of-type(3) {
+		width: 90%;
+	}
+
+	.the-post-container div:nth-of-type(2) {
+		width: 90%;
+	}
+
+	.the-post-container div:nth-of-type(1) {
+		width: 90%;
+	}
+
+	.the-project-container {
+		width: 80%;
+		margin-top: 3%;
+	}
+
+	.the-project-container div:nth-last-of-type(1) {
+		width: 90%;
+	}
+
+	.the-project-container div:nth-last-of-type(2) {
+		width: 90%;
+	}
+
+	.the-project-container div:nth-of-type(1), .the-post-container div:nth-of-type(1) {
+		border: none;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+
+	html {
+	  width: 100%;
+	  height: 100%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+
+	.root-div {
+		width: 1500px;
+	}
+
+
+}

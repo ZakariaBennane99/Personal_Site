@@ -1,0 +1,30 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 8080",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.1.5",
+    "@notionhq/client": "^2.2.3",
+    "cloudinary": "^1.33.0",
+    "dotenv": "^16.0.3",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.5",
+    "highlight.js": "^11.7.0",
+    "marked": "^4.2.12",
+    "mongoose": "^6.9.1",
+    "net": "^1.0.2",
+    "next": "13.1.5",
+    "notion-to-md": "^2.5.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "reading-time": "^1.5.0",
+    "uuid": "^9.0.0"
+  }
+}
