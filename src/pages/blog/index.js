@@ -72,6 +72,24 @@ export default function blogList({ postsSerialized }) {
 
 export const getStaticProps = async () => {
 
+  function getMonthNum(st) {
+    const m = {
+      'Jan': 0,
+      'Feb': 1,
+      'Mar': 2,
+      'Apr': 3,
+      'May': 4,
+      'Jun': 5,
+      'Jul': 6,
+      'Aug': 7,
+      'Sep': 8,
+      'Oct': 9,
+      'Nov': 10,
+      'Dec': 11,
+    }
+    return m[st]
+  }
+
   // connect the DB
   connectDB()
 
@@ -223,7 +241,22 @@ export const getStaticProps = async () => {
   }
 
   const postsReady = await posts()
-  const postsSerialized = JSON.stringify(postsReady)
+  const orderedPosts = postsReady.sort((a, b) => {
+    const age = a.date.split(' ')
+    const am = getMonthNum(age[0])
+    const ad = parseInt(age[1].slice(0, -1))
+    const ay = parseInt(age[2])
+    const bge = b.date.split(' ')
+    const bm = getMonthNum(bge[0])
+    const bd = parseInt(bge[1].slice(0, -1))
+    const by = parseInt(bge[2])
+    if (ay < by || ay === by && am < bm || ay === by && am === bm && ad <= bd) {
+      return 1
+    } else {
+      return -1
+    }
+  })
+  const postsSerialized = JSON.stringify(orderedPosts)
 
   return {
     props: {
