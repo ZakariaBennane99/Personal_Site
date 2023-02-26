@@ -190,7 +190,7 @@ export const getStaticProps = async () => {
         }
       }))
       const re = await projects2
-      return [...projects2.filter(el => el), ...projects1]
+      return [...re.filter(el => el), ...projects1]
     }
   }
 
