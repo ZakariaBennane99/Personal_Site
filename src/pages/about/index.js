@@ -29,8 +29,7 @@ export default function AboutPage() {
                             the dot com bubble. I worked in a variety of jobs, from sewing
                             beds at Souk “Al Qurayaa” in my native city at 9
                             to varnishing wood at my uncle’s workshop. Currently, I’m
-                            studying for a BBA, writing about SEO and digital marketing
-                            strategies for SaaS, and making stuff.</p>
+                            studying for a BBA, writing about marketing, and making stuff.</p>
                         <p>I recently discovered that I’m an HSP -- Highly Sensitive Person.
                             The more I read and learn, the more I became aware of myself.
                             I’m already an Assertive Defender (you can read about it <a href='https://www.16personalities.com/profiles/39fcc76411111' target='_blank' rel='noreferrer'>here</a>),
@@ -41,7 +40,7 @@ export default function AboutPage() {
                     </div>
                     <div style={{ marginBottom: '5px' }}>
                         <h1>Connect</h1>
-                        <a href='https://www.linkedin.com/in/zakaria-bennane-6b789423a/'>
+                        <a href='https://www.linkedin.com/in/zakaria-bennane-%F0%9F%98%BA-6b789423a/'>
                         <Image src='./link.svg' alt='linkedIn logo' width={40} height={40} /></a>
                         <a href='https://twitter.com/zakaria_bennane'>
                         <Image src='./twit.svg' alt='twitter logo' width={40} height={40} /></a>
